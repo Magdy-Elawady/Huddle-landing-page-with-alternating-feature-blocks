@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+:root {
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --Pink: hsl(322, 100%, 66%);
+
+    /* ### Neutral */
+
+    --Very-Pale-Cyan: hsl(193, 100%, 96%);
+    --Very-Dark-Cyan: hsl(192, 100%, 9%);
+    --Grayish-Blue: hsl(208, 11%, 55%);
+}
+
+/* css reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+  */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+      2. Remove default margin
+    */
+* {
+    margin: 0;
+    font-size: inherit;
+}
+
+/*
+      Typographic tweaks!
+      3. Add accessible line-height
+      4. Improve text rendering
+    */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+      5. Improve media defaults
+    */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+      6. Remove built-in form typography styles
+    */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+      7. Avoid text overflows
+    */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+
+
+
+
+
+
+
+/* ---------- page styling ---------- */
+
+body {
+
+    /*     ### Body, Call-to-actions    */
+    font-family: 'Open Sans', sans-serif;
+    Font-size: 18px;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+
+}
+
+
+
+main {
+    background-color: var(--Very-Pale-Cyan);
+    background-image: url(images/bg-hero-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/* ---------- header ---------- */
+
+header {
+    /* Headings */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 14px;
+}
+
+
+header>img {
+    width: 100px;
+}
+
+
+header>button {
+    border: none;
+    background-color: white;
+    font-size: 11px;
+    padding: 4px 24px;
+    border-radius: 100px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: hsl(192, 100%, 9%);
+
+}
+
+header>button:hover {
+    color: hsla(192, 100%, 9%, 0.8);
+}
+
+
+@media(min-width:1000px) {
+    header {
+        padding: 50px 80px;
+    }
+
+    header>img {
+        width: 190px;
+    }
+
+    header>button {
+        font-size: 14px;
+        padding: 13px 60px;
+        border-radius: 100px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+
+    }
+
+}
+
+
+
+/* ---------- hero part ---------- */
+
+.hero {
+    text-align: center;
+    padding: 50px;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    margin-bottom: 24px;
+    margin-top: 20px;
+    line-height: 34px;
+    color: var(--Very-Dark-Cyan);
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 24px;
+    color: var(--Very-Dark-Cyan);
+
+}
+
+.hero button {
+    border: none;
+    background-color: var(--Pink);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    width: 80%;
+    padding: 10px 0;
+    border-radius: 100px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 60px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: hsla(322, 100%, 66%, 0.8);
+
+}
+
+
+
+@media(min-width:1000px) {
+
+    .hero {
+        text-align: left;
+        padding: 12px 80px 60px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 520px auto;
+        gap: 60px;
+    }
+
+
+    .hero h1 {
+        font-size: 40px;
+        margin-top: 60px;
+        margin-bottom: 28px;
+        line-height: 60px;
+    }
+
+
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .hero button {
+        margin-top: 0px;
+        font-size: 14px;
+        font-weight: 700;
+        width: 53.5%;
+        padding: 17.5px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------- sections part ---------- */
+
+.sections-part {
+    padding: 60px 20px 64px;
+    display: grid;
+    gap: 42px;
+}
+
+
+section {
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 50px 40px 36px;
+    min-height: 490px;
+}
+
+section:nth-child(2) img {
+    margin-bottom: 80px;
+}
+
+section:nth-child(3) img {
+    margin-bottom: 70px;
+}
+
+
+section img {
+    padding: 0 10px;
+}
+
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--Very-Dark-Cyan);
+    font-size: 21px;
+    margin: 56px 0px 14px;
+}
+
+section p {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--Grayish-Blue);
+}
+
+
+@media(min-width:1000px) {
+
+    .sections-part {
+        padding: 160px 105px 64px;
+        gap: 42px;
+    }
+
+    section {
+        text-align: left;
+        padding: 0px 20px 0px 110px;
+        min-height: 437px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    section img {
+        width: 432px;
+        margin: 0px;
+
+    }
+
+    section:nth-child(2) img {
+        margin-bottom: 0px;
+        order: 2;
+    }
+
+    section:nth-child(3) img {
+        margin-bottom: 0px;
+    }
+
+    .texts {
+        max-width: 500px;
+    }
+
+
+    section h2 {
+        font-size: 28px;
+        margin: 0px 0px 12px 0px;
+    }
+
+    section p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ---------- call-of-action-card  ---------- */
+
+.call-of-action-card {
+    text-align: center;
+    padding: 40px 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translate(0, 40%);
+    z-index: 1;
+    background-color: white;
+    margin: 0 14px;
+}
+
+.call-of-action-card h2 {
+    color: var(--Very-Dark-Cyan);
+    margin-bottom: 26px;
+}
+
+
+.call-of-action-card button {
+    border: none;
+    background-color: var(--Pink);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    width: 60%;
+    padding: 11px 0;
+    border-radius: 100px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    cursor: pointer;
+
+}
+
+.call-of-action-card button:hover {
+    background-color: hsla(322, 100%, 66%, 0.8);
+
+}
+
+
+
+@media(min-width:1000px) {
+    .call-of-action-card {
+        display: grid;
+        padding: 58px 120px;
+        max-width: 800px;
+        transform: translate(0, 30%);
+        margin: auto;
+    }
+
+    .call-of-action-card h2 {
+        font-size: 32.25px;
+        margin-bottom: 36px;
+    }
+
+    .call-of-action-card button {
+        font-size: 20px;
+        width: 75%;
+        padding: 25px 0;
+        margin: auto;
+    }
+
+}
+
+
+
+
+
+
+
+/* ---------- footer  ---------- */
+
+footer {
+    background-color: var(--Very-Dark-Cyan);
+    color: white;
+    padding: 140px 20px 40px;
+}
+
+.footer-logo {
+    transform: scale(73%);
+    transform-origin: left top;
+    margin-bottom: 14px;
+}
+
+.contact-info {
+    display: grid;
+    gap: 26px;
+    font-size: 16px;
+
+}
+
+.icon-with-text:first-child img {
+    transform: translate(0, -170%);
+}
+
+.icon-with-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.footer-links {
+    margin-top: 50px;
+    display: grid;
+    gap: 16px;
+    color: white;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+.social-media ion-icon {
+    border: 1px rgb(255, 255, 255) solid;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+    padding: 7px;
+    transition: .2s;
+
+}
+
+footer ion-icon:hover {
+    color: var(--Pink);
+}
+
+.social-media {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.copyrights {
+    margin-top: 26px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+footer div {
+    right: 20px;
+    bottom: -7px;
+}
+
+footer ion-icon {
+    width: 24px;
+    height: 24px;
+    padding: 7px;
+}
+
+
+
+
+
+
+
+
+@media(min-width:1000px) {
+    footer {
+        padding: 190px 120px 45px;
+    }
+
+    .footer-logo {
+        transform: scale(100%);
+        transform-origin: left top;
+        margin-bottom: 38px;
+    }
+
+    .contact-info {
+        gap: 24px;
+        max-width: 380px;
+    }
+
+    .icon-with-text:first-child img {
+        transform: translate(0, -100%);
+    }
+
+    .icon-with-text {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .footer-flex {
+        display: grid;
+        grid-template-columns: 500px 1fr 1fr;
+        justify-content: space-between;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 90px;
+        row-gap: 0px;
+        margin-top: 0px;
+
+    }
+
+
+    .social-media {
+        margin-top: 0px;
+        margin-left: 150px;
+    }
+
+    .social-and-copyrights {
+        display: grid;
+        justify-content: space-between;
+    }
+
+    .copyrights {
+        text-align: end;
+        margin-top: 60px;
+        font-size: 13px;
+
+    }
+}
